@@ -39,13 +39,13 @@ def gd_reglin_uni(X, y, alpha, epochs, theta = np.array([0,0], ndmin = 2).T):
         
 
     
-    plt.figure(figsize=(12,8))
-    plt.plot(cost, color='blue')
-    plt.title ('Convergência Custo x Iterações')
-    plt.xlabel ('Iterações')
-    plt.ylabel ('Custo')
-    plt.legend()
-    plt.show()
+   # plt.figure(figsize=(12,8))
+    #plt.plot(cost, color='blue')
+    #plt.title ('Convergência Custo x Iterações')
+    #plt.xlabel ('Iterações')
+    #plt.ylabel ('Custo')
+    #plt.legend()
+    #plt.show()
     filename = 'target/plot1.3.png'
 
     if not os.path.exists(os.path.dirname(filename)):
