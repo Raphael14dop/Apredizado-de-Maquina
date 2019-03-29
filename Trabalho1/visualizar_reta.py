@@ -49,16 +49,12 @@ def plot(filepath, theta):
 
     plt.legend()
 
-    plt.show()
-
-
-
     filename = 'target/plot1.2.png'
 
-    if not os.path.exists(os.path.dirname(filename)):
+    #if not os.path.exists(os.path.dirname(filename)):
 
-        os.makedirs(os.path.dirname(filename))
-
-
+     #   os.makedirs(os.path.dirname(filename))
 
     plt.savefig(filename)
+    
+    plt.show()

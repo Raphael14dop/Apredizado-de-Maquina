@@ -9,15 +9,6 @@ import numpy as np
 from plot_ex1data1 import importarDados
 
 
-def executa ():
-
-    data = importarDados(filepath="\ex1data1.txt", names=["Population","Profit"])
-    #custo, theta = gd_reglin_uni(data.X,data.y, 0.01, 7000)
-    #print(custo,theta)
-    theta = np.array([0,0]).reshape(-1, 1)
-    result = (custo_regrlin(data.X,data.y,theta))
-    print (result)
-
 def custo_regrlin(X, y, theta):
     
     """"

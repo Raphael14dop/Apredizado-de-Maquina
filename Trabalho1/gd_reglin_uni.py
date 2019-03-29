@@ -13,21 +13,20 @@ import matplotlib.pyplot as plt
 
 from custo_reglin_uni import custo_regrlin
 
-from plot_ex1data1 import importarDados
+"""
+Função para o calculo do gradiente, passando como parâmetro a função grafico. Onde caso
+ seja True é gerado grafico de convergência.
 
+"""
 
-def executa ():
-
-    data = importarDados(filepath="\ex1data1.txt", names=["Population","Profit"])
-    custo, theta = gd_reglin_uni(data.X,data.y, 0.01, 5000)
-    print(custo)
-
-def gd_reglin_uni(X, y, alpha, epochs, theta = np.array([0,0], ndmin = 2).T):
+def gd_reglin_uni(X, y, alpha, epochs,grafico, theta = np.array([0,0],ndmin = 2).T):
 
 
     m = len(y)
 
     cost = np.zeros(epochs)
+    
+    #Realizando calculo do custo
 
     for i in range(epochs):
 
@@ -37,20 +36,21 @@ def gd_reglin_uni(X, y, alpha, epochs, theta = np.array([0,0], ndmin = 2).T):
         theta = theta - (alpha * gradient)
         cost[i] = custo_regrlin(X, y, theta = theta)
         
+        #Condição para Plotar gráfico de convergência Custo x Iterações 
 
-    
-   # plt.figure(figsize=(12,8))
-    #plt.plot(cost, color='blue')
-    #plt.title ('Convergência Custo x Iterações')
-    #plt.xlabel ('Iterações')
-    #plt.ylabel ('Custo')
-    #plt.legend()
-    #plt.show()
-    filename = 'target/plot1.3.png'
-
-    if not os.path.exists(os.path.dirname(filename)):
-
-        os.makedirs(os.path.dirname(filename))
+    if (grafico == True):
         
+        plt.figure(figsize=(12,8))
+        plt.plot(cost, color='blue')
+        plt.title ('Convergência Custo x Iterações')
+        plt.xlabel ('Iterações')
+        plt.ylabel ('Custo')
+        plt.legend()
+        filename = 'target/plot1.3.0.png'
+        if not os.path.exists(os.path.dirname(filename)):
+
+            os.makedirs(os.path.dirname(filename))
+        plt.savefig(filename)
+        plt.show()
 
     return cost[-1], theta

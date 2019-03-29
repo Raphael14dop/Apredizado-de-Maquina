@@ -12,18 +12,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from gd_reglin_uni import gd_reglin_uni
-from plot_ex1data1 import importarDados
 from custo_reglin_uni import custo_regrlin
 #Usado para plotar 3d em fig.gca
 
 from mpl_toolkits.mplot3d import Axes3D
-
-
-def executa ():
-
-    data = importarDados(filepath="\ex1data1.txt", names=["Population","Profit"])
-    custo, theta = gd_reglin_uni(data.X,data.y, 0.01, 5000)
-    plot(data)
 
 
 def plot(data):
@@ -65,7 +57,7 @@ def plot(data):
 
     plt.title(r'Função de custo $J(\theta)$')
     
-    plt.show()
+    
 
 
 
@@ -79,6 +71,6 @@ def plot(data):
 
     plt.savefig(filename)
 
-
+    plt.show()
 
     return surf

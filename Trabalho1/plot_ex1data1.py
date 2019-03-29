@@ -42,7 +42,11 @@ def importarDados(filepath, names):
 
 def plot():
 
-    data = importarDados(filepath="\ex1data1.txt", names=["Population","Profit"])
+    # Importando os dados do dataset
+
+    data = importarDados(filepath= "\ex1data1.txt", names=["Population","Profit"])
+    
+    #Definindo tamanho da figura
        
     plt.figure(figsize=(10,6))
     

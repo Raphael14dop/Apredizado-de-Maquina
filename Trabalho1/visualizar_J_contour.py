@@ -12,15 +12,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from custo_reglin_uni import custo_regrlin
-from plot_ex1data1 import importarDados
 
 
+# Passado Theta e dados como parâmetros
 
-def executa ():
-
-    data = importarDados(filepath="\ex1data1.txt", names=["Population","Profit"])
-    custo, theta = gd_reglin_uni(data.X,data.y, 0.01, 5000)
-    plot(data, theta)
 
 
 def plot(data, theta):
@@ -76,10 +71,6 @@ def plot(data, theta):
     plt.title(r'Contornos da função de custo')
 
 
-    plt.show()
-
-
-
     filename = 'target/plot1.3.1.png'
 
     if not os.path.exists(os.path.dirname(filename)):
@@ -90,6 +81,6 @@ def plot(data, theta):
 
     plt.savefig(filename)
 
-
+    plt.show()
 
     return J
