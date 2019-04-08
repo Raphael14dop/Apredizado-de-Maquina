@@ -17,7 +17,6 @@ from custo_reglin_uni import custo_regrlin
 # Passado Theta e dados como parâmetros
 
 
-
 def plot(data, theta):
 
     # Valores de theta0 e theta1 informados no enunciado do trabalho

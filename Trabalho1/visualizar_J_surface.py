@@ -11,11 +11,10 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from gd_reglin_uni import gd_reglin_uni
 from custo_reglin_uni import custo_regrlin
 #Usado para plotar 3d em fig.gca
 
-from mpl_toolkits.mplot3d import Axes3D
+#from mpl_toolkits.mplot3d import Axes3D
 
 
 def plot(data):

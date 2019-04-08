@@ -11,18 +11,20 @@ import matplotlib.pyplot as plt
 
 from custo_reglin_multi import custo_reglin_multi
 
+""" Agora para nº de caracteristicas > 1 minha hipotese passa a ser o somatorio
+ do produto escalar de cada valor de theta pela qtd de caracterisiticas """
+
 
 def gd(X, y, alpha, epochs, theta=np.array([0,0,0], ndmin = 2).T):
 
-
-
+   
     m = len(y)
 
 
 
     cost = np.zeros(epochs)
 
-    
+    # GD sendo aplicado para otimização no caso multivariado da regressão linear.
 
     for i in range(epochs):
 

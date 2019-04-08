@@ -12,9 +12,9 @@ from sigmoide import sigmoide
 from gd_reglog import gd_reglog
 
     
-    # Funçao alterada para Retornar o valor do custo e gradiente
+   
     
-def custo_reglog(theta, X, y):
+def funcaoCustoRegressaoLogistica(theta,X,y):
 
     theta = np.matrix(theta)
 
@@ -25,11 +25,6 @@ def custo_reglog(theta, X, y):
     grad0 = np.multiply(-y, np.log(sigmoide(X * theta.T)))
 
     grad1 = np.multiply((1 - y), np.log(1 - sigmoide(X * theta.T)))
-    
-    # Funçao Retorna o valor do custo e gradiente
-    
-    resultado = np.sum(grad0 - grad1) / (len(X))
-    
-    grad = gd_reglog(theta,X,y)
 
-    return resultado,grad
+    return np.sum(grad0 - grad1) / (len(X))
+

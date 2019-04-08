@@ -14,6 +14,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
+def executa ():
+
+    data,X,y = importarDados(filepath="\ex2data2.txt", names=['Teste 1', 'Teste 2', 'Aceito'])
+    
+    #print(data)
+    plot(data)
+
 def importarDados(filepath,names):
 
     path = os.getcwd() + filepath
@@ -30,10 +37,11 @@ def importarDados(filepath,names):
 
     # A primeira coluna, preenchida com 1's, represenhta o theta0
 
-    if insertOnes:
+   
+    #if insertOnes:
 
-        data.insert(0, 'Ones', 1)
-
+       #data.insert(0, 'Ones', 1)
+ 
 
 
     # converte de dataframes para arrays
@@ -54,7 +62,7 @@ def importarDados(filepath,names):
 
 
 
-    return data, X, y
+    return data,X, y
 
 
 
@@ -66,26 +74,26 @@ def plot(data):
 
 
 
-    positivo = data[data['Aprovado'].isin([1])]
+    Aceito = data[data['Aceito'].isin([1])]
 
-    negativo = data[data['Aprovado'].isin([0])]
+    Rejeitado = data[data['Aceito'].isin([0])]
 
 
 
     fig, ax = plt.subplots(figsize=(12,8))
 
-    ax.scatter(positivo['Prova 1'], positivo['Prova 2'], s=50, c='k', marker='+', label='Aprovado')
+    ax.scatter(Aceito['Teste 1'], Aceito['Teste 2'], s=50, c='k', marker='+', label='y=1')
 
-    ax.scatter(negativo['Prova 1'], negativo['Prova 2'], s=50, c='y', marker='o', label='Nao Aprovado')
+    ax.scatter(Rejeitado['Teste 1'], Rejeitado['Teste 2'], s=50, c='y', marker='o', label='y=0')
 
     ax.legend()
 
-    ax.set_xlabel('Nota da Prova 1')
+    ax.set_xlabel('Microchip Teste 1')
 
-    ax.set_ylabel('Nota da Prova 2')
+    ax.set_ylabel('Microchip Teste 2')
 
 
-    filename = 'target/plot3.1.png'
+    filename = 'target/plot4.1.png'
 
     if not os.path.exists(os.path.dirname(filename)):
 

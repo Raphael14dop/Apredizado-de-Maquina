@@ -1,23 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Mar 24 00:00:59 2019
+Created on Sun Apr  7 13:43:57 2019
 
 @author: rapha
 """
 
 import numpy as np
 
-
-
-
-
 def custo_reglin_multi(X, y, theta):
 
     # Quantidade de exemplos
-    #m = np.array.shape[0]
-    m = len(y)
-    
-   
+
+    m = len(X)
+
 
 
     # Computa a funcao de custo J

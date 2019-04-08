@@ -6,8 +6,6 @@ Created on Tue Mar 19 20:40:06 2019
 """
 
 import numpy as np
-from plot_ex1data1 import importarDados
-
 
 def custo_regrlin(X, y, theta):
     

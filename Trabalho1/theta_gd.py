@@ -7,10 +7,6 @@ Created on Wed Mar 20 00:56:15 2019
 
 import numpy as np
 
-from gd_reglin_uni import gd_reglin_uni
-from custo_reglin_uni import custo_regrlin
-
-    
 def theta_gd(theta):
     
     # São criados dois Arrays para o calculo da populaçao referente a 70.000 e 35.000. 

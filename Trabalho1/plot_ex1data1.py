@@ -12,8 +12,6 @@ import pandas as pd
 
 import matplotlib.pyplot as plt
 
-#%matplotlib inline
-
 
 def importarDados(filepath, names):
 
@@ -25,7 +23,6 @@ def importarDados(filepath, names):
     X = data.iloc[:,0:-1].values
 
     y = data.iloc[:, -1:].values
-
 
     # Incluir o valor de 1 em x, pois theta0 = 1
 

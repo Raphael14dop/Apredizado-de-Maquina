@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar 28 19:55:39 2019
+Created on Sun Apr  7 15:44:32 2019
 
 @author: rapha
 """
@@ -18,8 +18,6 @@ def normalizar_caracteristica(X, y):
 
     X_norm = (X - mean_X) / std_X
 
-
-
     mean_y = np.mean(y)
 
     std_y = np.std(y)
@@ -27,11 +25,9 @@ def normalizar_caracteristica(X, y):
     y_norm = (y - mean_y) / std_y
 
 
-
+   
     # Incluir o valor de 1 em x, pois theta0 = 1
 
-    X_norm = np.c_[np.ones((X_norm.shape[0], 1)), X_norm]
+    #X_norm = np.c_[np.ones((X_norm.shape[0], 1)), X_norm]
 
-
-
-    return X_norm, y_norm,mean_X,std_X
+    return X_norm,y_norm,mean_X,std_X,mean_y,std_y

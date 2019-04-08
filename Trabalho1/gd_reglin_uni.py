@@ -7,14 +7,12 @@ Created on Tue Mar 19 20:43:54 2019
 import os
 import numpy as np
 
-import pandas as pd
-
 import matplotlib.pyplot as plt
 
 from custo_reglin_uni import custo_regrlin
 
 """
-Função para o calculo do gradiente, passando como parâmetro a função grafico. Onde caso
+Função para o calculo do gradiente, passando como parâmetro a variavel grafico. Onde caso
  seja True é gerado grafico de convergência.
 
 """

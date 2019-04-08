@@ -19,7 +19,7 @@ def predizer(theta, X):
 
     return [1 if x >= 0.5 else 0 for x in probabilidade]
 
-
+# função para definir a porcentagem de acerto
 
 def acuracia(X, y, result):
 
